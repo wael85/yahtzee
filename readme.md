@@ -92,6 +92,8 @@ You shouldn't need to change this code, but might want to look at it.
 ### server
 The server implementing the game system. The server is a RESTful (-ish) web service. It also broadcasts the changes through pubsub.
 
+The server persists nothing, so every time you restart the server it contains only game 0 (see below).
+
 The server offers the following services:
 #### POST /pending-games
 Body should contain { creator: string, number-of-players: number }. Creator is the player making the request.
