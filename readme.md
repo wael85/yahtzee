@@ -1,4 +1,4 @@
-#Yahtzee
+# Yahtzee
 
 This is an implementation of multi-player Yahtzee. It uses (or at least approximates the Danish rules).
 
