@@ -44,8 +44,8 @@ import {is_finished} from 'models/src/model/yahtzee.game';
 </script>
 
 <template>
-  <h1>Yahtzee!</h1>
-  <h2 v-if="playerStore.player">Welcome player {{playerStore.player}}</h2>
+  <h1 class="header">Yahtzee!</h1>
+  <h2 v-if="playerStore.player" class="subheader">Welcome player {{playerStore.player}}</h2>
   <nav v-if="playerStore.player">
     <RouterLink class='link' to="/">Lobby</RouterLink>
     
@@ -55,17 +55,16 @@ import {is_finished} from 'models/src/model/yahtzee.game';
     
     <h3>Waiting for players</h3>
     <RouterLink class='link' v-for="game in my_pending_games" :to="`/pending/${game.id}`">Game #{{game.id}}</RouterLink>
-
+    
     <h2>Available Games</h2>
     <RouterLink class='link' v-for="game in other_pending_games" :to="`/pending/${game.id}`">Game #{{game.id}}</RouterLink>
   </nav>
-
+  
   <RouterView class='main'/>
 </template>
 
 <style>
   #app {
-    height: 100%;
     background-color: rgb(243, 244, 245);
     margin: 0;
     padding: 0.6rem;
@@ -81,15 +80,11 @@ import {is_finished} from 'models/src/model/yahtzee.game';
     padding: 0;
   }
   nav {
-    float: right;
-    overflow: visible;
     margin-left: 5%;
+    float: right;
   }
   .link {
     margin: .3rem;
     display: block;
-  }
-  .main {
-    overflow: auto;
   }
 </style>

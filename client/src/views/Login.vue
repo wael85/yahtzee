@@ -30,4 +30,5 @@
 <template>
   <h1>Login</h1>
   Username: <input v-model="player" @keypress="loginKeyListener"/> <button :disabled="!enabled" @click="login()">Login</button>
+  <div></div>
 </template>

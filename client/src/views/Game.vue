@@ -51,9 +51,6 @@
 </template>
 
 <style>
-  .card {
-    float:left;
-  }
   .roll {
     margin: .3rem 1rem;
   }
@@ -78,5 +75,11 @@
     font-weight: bold;
     background-color: firebrick;
     color: lavenderblush;
+  }
+  .game {
+    contain: content;
+  }
+  .card {
+    float: left;
   }
 </style>

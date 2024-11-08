@@ -5,7 +5,7 @@
   import {scores} from 'models/src/model/yahtzee.game';
   import {computed} from 'vue';
   import type { IndexedYahtzee } from '@/model/game'
-import { score } from 'models/src/model/yahtzee.slots';
+  import { score } from 'models/src/model/yahtzee.slots';
 
   const { game, player, enabled } = defineProps<{game: IndexedYahtzee, player: string, enabled: boolean}>()
 
