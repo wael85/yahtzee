@@ -1,0 +1,40 @@
+.yahtzee-game {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+  }
+  
+  .players {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .player-column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .yahtzee-board {
+    grid-column: span 2;
+  }
+  
+  .dice-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .dice-value {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    margin: 5px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .dice-value.selected {
+    background-color: yellow;
+  }

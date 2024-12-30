@@ -1,5 +1,5 @@
 {
-  "include": ["**/*"],
+  "include": ["**/*", "../react-client/src/app/api.ts"],
   "exclude": ["node_modules"],
   "compilerOptions": {
     "lib": ["es2023", "dom"],

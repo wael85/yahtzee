@@ -12,16 +12,20 @@ export default (ws: WebSocket) => {
   
   function reroll(id: number, held: number[], player: string) {
     const game = G.game(id)
-    if (!game || player !== game.players[game.playerInTurn])
+    if (!game || player !== game.players[game.playerInTurn]){
       throw new Error('Forbidden')
-    return G.update(id, game => Game.reroll(held, game))
+    } else{
+      return G.update(id, game => Game.reroll(held, game))
+    }
   }
   
   function register(id: number, slot: DieValue | LowerSectionKey, player: string) {
     const game = G.game(id)
-    if (!game || player !== game.players[game.playerInTurn])
+    if (!game || player !== game.players[game.playerInTurn]){
       throw new Error('Forbidden')
-    return G.update(id, game => Game.register(slot, game))
+    } else{
+      return G.update(id, game => Game.register(slot, game))
+    }
   }
 
   function games(): Readonly<IndexedGame[]> {

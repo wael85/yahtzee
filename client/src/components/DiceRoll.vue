@@ -18,6 +18,7 @@
 
   async function reroll() {
     const heldIndices = held.map((b, i) => b ? i : undefined).filter(i => i !== undefined);
+    console.log('rerolling', heldIndices)
     api.reroll(game, heldIndices, player)
   }
 </script>
